@@ -535,59 +535,65 @@ a {
   letter-spacing: 0.03em;
 }
 
-
-
-.product{
+/* Position */
+.card {
+  position: relative;
   width: 370px;
 }
-.product-thumb {
+.card-thumb {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.product-thumb::before {
-  display: inline-block;
+
+.card-thumb::before {
   content: "";
+  background-color: rgba(33, 150, 243, 0.9);
+  display: inline-block;
 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2196F3;
+  
+  overflow: hidden;
   opacity: 0;
 }
-.product-thumb:hover::before {
+.card:hover .card-thumb::before,
+.card:focus .card-thumb::before {
   opacity: 1;
 }
 
-.product-actions {
-  outline: 3px solid orange;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-overlay {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--second-accent-color);
+  
   display: flex;
+  align-items: center;
+  margin: 0;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
   opacity: 0;
 }
-
-.product:hover .product-actions {
+.card:hover .card-overlay,
+.card:focus .card-overlay {
   opacity: 1;
 }
+.text-overlay {
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
 
-.product-actions .icon{
-  width: 32px;
-  height: 32px;
-}
-.product-meta {
-  padding: 15px;
-}
-.product-name {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.product-price {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+
+
+
