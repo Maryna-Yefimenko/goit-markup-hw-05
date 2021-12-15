@@ -520,7 +520,7 @@ a {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Спрятан backdrop */
@@ -544,15 +544,15 @@ a {
   width: 528px;
   height: 581px;
   padding: 15px;
+
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-
   background-color: var(--second-accent-color);
 
   transform: translate(-50%, -50%) scale(1.1);
-  opacity: 1;
+  opacity: 1; 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .close-modal {
@@ -565,18 +565,28 @@ a {
   align-items: center;
   width: 30px;
   height: 30px;
-
-  color: var(--black-text-color);
-  cursor: pointer;
   
+  color: var(--black-text-color);
+  cursor: pointer; 
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  box-sizing: border-box;
   background-color: var(--primary-background-color);
 }
 
 .close-icon {
   fill: currentColor;
+}
+.text-modal {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
 }
 
 /* Стили для portfolio.html */
