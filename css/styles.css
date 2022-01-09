@@ -58,6 +58,10 @@ a {
   margin: 0;
   background-color: var(--primery-background-color);
 }
+.hidden-title {
+  display: none;
+  }
+
 /* top line */
 .logo {
   margin-right: 93px;
@@ -209,7 +213,7 @@ a {
   padding-right: 32px;
   padding-left: 32px;
 
-  font-style: 700;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -452,7 +456,7 @@ a {
   color: var(--second-accent-color);
 }
 
-.adress-link{
+.address-link {
   font-style: normal;
   color: var(--second-accent-color);
 }
@@ -610,6 +614,10 @@ a {
 .filter .item:not(:last-child) {
   margin-right: 8px;
 }
+.container.filter {
+  margin-bottom: 0;
+}
+
 .button-primary,
 .button-secondary {
   font-weight: 500;
